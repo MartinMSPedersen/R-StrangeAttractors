@@ -22,9 +22,27 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// deJong
+DataFrame deJong(double a, double b, double c, double d, int iterations, double x0, double y0);
+RcppExport SEXP _StrangeAttractors_deJong(SEXP aSEXP, SEXP bSEXP, SEXP cSEXP, SEXP dSEXP, SEXP iterationsSEXP, SEXP x0SEXP, SEXP y0SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    Rcpp::traits::input_parameter< double >::type c(cSEXP);
+    Rcpp::traits::input_parameter< double >::type d(dSEXP);
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    Rcpp::traits::input_parameter< double >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< double >::type y0(y0SEXP);
+    rcpp_result_gen = Rcpp::wrap(deJong(a, b, c, d, iterations, x0, y0));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_StrangeAttractors_Clifford", (DL_FUNC) &_StrangeAttractors_Clifford, 7},
+    {"_StrangeAttractors_deJong", (DL_FUNC) &_StrangeAttractors_deJong, 7},
     {NULL, NULL, 0}
 };
 

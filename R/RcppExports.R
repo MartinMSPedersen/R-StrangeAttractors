@@ -5,3 +5,7 @@ Clifford <- function(a, b, c, d, iterations = 1e7L, x0 = 0, y0 = 0) {
     .Call(`_StrangeAttractors_Clifford`, a, b, c, d, iterations, x0, y0)
 }
 
+deJong <- function(a, b, c, d, iterations = 1e7L, x0 = 0, y0 = 0) {
+    .Call(`_StrangeAttractors_deJong`, a, b, c, d, iterations, x0, y0)
+}
+
