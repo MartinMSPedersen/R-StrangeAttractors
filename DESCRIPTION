@@ -1,0 +1,11 @@
+Package: StrangeAttractors
+Type: Package
+Title: Compute Strange Attractors.
+Version: 1.0
+Date: 2017-12-16
+Author: Martin M. S. Pedersen
+Maintainer: Martin M. S. Pedersen <martin@linux.com>
+Description: This packages computes several Strange Attractors using fast C++-code. An attractor is called strange if it has a fractal structure. This is often the case when the dynamics on it are chaotic.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.13)
+LinkingTo: Rcpp
