@@ -16,6 +16,3 @@ DataFrame deJong(double a, double b, double c, double d,
 	// return a new data frame
 	return DataFrame::create(_["x"]= x, _["y"]= y);
 }
-
-
-
