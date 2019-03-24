@@ -22,6 +22,21 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// Henon
+DataFrame Henon(double x0, double y0, double a, double b, int iterations);
+RcppExport SEXP _StrangeAttractors_Henon(SEXP x0SEXP, SEXP y0SEXP, SEXP aSEXP, SEXP bSEXP, SEXP iterationsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< double >::type y0(y0SEXP);
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    rcpp_result_gen = Rcpp::wrap(Henon(x0, y0, a, b, iterations));
+    return rcpp_result_gen;
+END_RCPP
+}
 // deJong
 DataFrame deJong(double a, double b, double c, double d, int iterations, double x0, double y0);
 RcppExport SEXP _StrangeAttractors_deJong(SEXP aSEXP, SEXP bSEXP, SEXP cSEXP, SEXP dSEXP, SEXP iterationsSEXP, SEXP x0SEXP, SEXP y0SEXP) {
@@ -39,10 +54,57 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// sprott
+DataFrame sprott(int iterations, double x0, double y0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9, double a10, double a11, double a12, double a13, double a14);
+RcppExport SEXP _StrangeAttractors_sprott(SEXP iterationsSEXP, SEXP x0SEXP, SEXP y0SEXP, SEXP a1SEXP, SEXP a2SEXP, SEXP a3SEXP, SEXP a4SEXP, SEXP a5SEXP, SEXP a6SEXP, SEXP a7SEXP, SEXP a8SEXP, SEXP a9SEXP, SEXP a10SEXP, SEXP a11SEXP, SEXP a12SEXP, SEXP a13SEXP, SEXP a14SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    Rcpp::traits::input_parameter< double >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< double >::type y0(y0SEXP);
+    Rcpp::traits::input_parameter< double >::type a1(a1SEXP);
+    Rcpp::traits::input_parameter< double >::type a2(a2SEXP);
+    Rcpp::traits::input_parameter< double >::type a3(a3SEXP);
+    Rcpp::traits::input_parameter< double >::type a4(a4SEXP);
+    Rcpp::traits::input_parameter< double >::type a5(a5SEXP);
+    Rcpp::traits::input_parameter< double >::type a6(a6SEXP);
+    Rcpp::traits::input_parameter< double >::type a7(a7SEXP);
+    Rcpp::traits::input_parameter< double >::type a8(a8SEXP);
+    Rcpp::traits::input_parameter< double >::type a9(a9SEXP);
+    Rcpp::traits::input_parameter< double >::type a10(a10SEXP);
+    Rcpp::traits::input_parameter< double >::type a11(a11SEXP);
+    Rcpp::traits::input_parameter< double >::type a12(a12SEXP);
+    Rcpp::traits::input_parameter< double >::type a13(a13SEXP);
+    Rcpp::traits::input_parameter< double >::type a14(a14SEXP);
+    rcpp_result_gen = Rcpp::wrap(sprott(iterations, x0, y0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14));
+    return rcpp_result_gen;
+END_RCPP
+}
+// Tinkerbell
+DataFrame Tinkerbell(double a, double b, double c, double d, double x0, double y0, int iterations);
+RcppExport SEXP _StrangeAttractors_Tinkerbell(SEXP aSEXP, SEXP bSEXP, SEXP cSEXP, SEXP dSEXP, SEXP x0SEXP, SEXP y0SEXP, SEXP iterationsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type a(aSEXP);
+    Rcpp::traits::input_parameter< double >::type b(bSEXP);
+    Rcpp::traits::input_parameter< double >::type c(cSEXP);
+    Rcpp::traits::input_parameter< double >::type d(dSEXP);
+    Rcpp::traits::input_parameter< double >::type x0(x0SEXP);
+    Rcpp::traits::input_parameter< double >::type y0(y0SEXP);
+    Rcpp::traits::input_parameter< int >::type iterations(iterationsSEXP);
+    rcpp_result_gen = Rcpp::wrap(Tinkerbell(a, b, c, d, x0, y0, iterations));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_StrangeAttractors_Clifford", (DL_FUNC) &_StrangeAttractors_Clifford, 7},
+    {"_StrangeAttractors_Henon", (DL_FUNC) &_StrangeAttractors_Henon, 5},
     {"_StrangeAttractors_deJong", (DL_FUNC) &_StrangeAttractors_deJong, 7},
+    {"_StrangeAttractors_sprott", (DL_FUNC) &_StrangeAttractors_sprott, 17},
+    {"_StrangeAttractors_Tinkerbell", (DL_FUNC) &_StrangeAttractors_Tinkerbell, 7},
     {NULL, NULL, 0}
 };
 

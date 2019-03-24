@@ -5,7 +5,19 @@ Clifford <- function(a, b, c, d, iterations = 1e7L, x0 = 0, y0 = 0) {
     .Call(`_StrangeAttractors_Clifford`, a, b, c, d, iterations, x0, y0)
 }
 
+Henon <- function(x0, y0, a = 1.4, b = 0.3, iterations = 1e7L) {
+    .Call(`_StrangeAttractors_Henon`, x0, y0, a, b, iterations)
+}
+
 deJong <- function(a, b, c, d, iterations = 1e7L, x0 = 0, y0 = 0) {
     .Call(`_StrangeAttractors_deJong`, a, b, c, d, iterations, x0, y0)
+}
+
+sprott <- function(iterations = 1e7L, x0 = 1, y0 = 1, a1 = 0.48, a2 = -0.63, a3 = 1.02, a4 = -1.66, a5 = -0.15, a6 = 2.08, a7 = 0.26, a8 = 1.39, a9 = -0.66, a10 = -0.41, a11 = -0.25, a12 = -1.29, a13 = -1.21, a14 = -0.65) {
+    .Call(`_StrangeAttractors_sprott`, iterations, x0, y0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14)
+}
+
+Tinkerbell <- function(a = 0.9, b = -0.6013, c = 2, d = 0.5, x0 = -0.72, y0 = -0.64, iterations = 1e7L) {
+    .Call(`_StrangeAttractors_Tinkerbell`, a, b, c, d, x0, y0, iterations)
 }
 
