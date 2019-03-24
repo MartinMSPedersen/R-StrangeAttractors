@@ -45,7 +45,7 @@ Maintainer: Martin M. S. Pedersen <martin@linux.com>
         my <- quantile(df$y, probs = 0.05)
         My <- quantile(df$y, probs = 0.95)
 
-        df  <- df %>% filter(x > mx, x < Mx, y > my, y < My) 
+        df \%<>\% filter(x > mx, x < Mx, y > my, y < My) 
         plot <- ggplot(df) +
                 geom_point(aes(x, y), shape=46, alpha=0.01, size=0, color="black") +
                 scale_x_continuous(expand = c(0,0))+
