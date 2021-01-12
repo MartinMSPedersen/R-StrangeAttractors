@@ -2,7 +2,7 @@
 using namespace Rcpp;
 
 // [[Rcpp::export]]
-DataFrame Henon(double x0, double y0, double a = 1.4, double b = 0.3, int iterations = 1e7) {
+DataFrame Henon(double x0, double y0, double a = 1.4, double b = 0.3, int iterations = 1e6) {
 	// create the columns
 	NumericVector x(iterations);
 	NumericVector y(iterations);
